@@ -18,11 +18,10 @@ async def enviar_vaga():
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
-        hoje = datetime.now().strftime("%Y-%m-%d")
+        hoje = "2025-02-20"
         tr_elements = soup.find_all(class_="col-md-6 col-xs-12")
 
         vagas_filtradas = []  
-        encontrou_vaga = False
         for tr in tr_elements:
             titulo_vaga = tr.get_text(" ", strip=True).split("Publicado:")[0].strip()
 
