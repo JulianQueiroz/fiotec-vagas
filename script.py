@@ -19,7 +19,7 @@ async def enviar_vaga():
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
-        hoje = "2025-02-20"
+        hoje = datetime.now().strftime("%Y-%m-%d")
         tr_elements = soup.find_all(class_="col-md-6 col-xs-12")
 
         vagas_filtradas = []  
