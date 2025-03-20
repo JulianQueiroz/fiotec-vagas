@@ -1,4 +1,4 @@
-name: Executar Script Diário
+name: Fiotec
 
 on:
   schedule:
