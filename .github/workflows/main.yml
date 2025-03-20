@@ -2,7 +2,7 @@ name: Fiotec
 
 on:
   schedule:
-    - cron: '53 21 * * *' 
+    - cron: '56 21 * * *' 
   workflow_dispatch:
 
 jobs:
