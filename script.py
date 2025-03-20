@@ -8,9 +8,10 @@ from dotenv import load_dotenv
 from datetime import datetime
 
 load_dotenv()
-
-bot = Bot(token=os.environ['TOKEN'])
-group_id = os.environ.get('GROUP_ID')  
+TOKEN = '7803564666:AAEIeVRn_zzdiumVg89RB12xGczBv1mksaU' 
+GROUP_ID = '-1002630091079' 
+bot = Bot(token=TOKEN)
+group_id = GROUP_ID  
 
 async def enviar_vaga():
     url = "https://www.fiotec.fiocruz.br/vagas-projetos/todas"
@@ -36,7 +37,7 @@ async def enviar_vaga():
                     
                     if group_id:
                         try:
-                            await bot.send_message(chat_id=group_id, text=vaga_info, parse_mode=ParseMode.MARKDOWN)
+                            await bot.send_message(chat_id=GROUP_ID, text=vaga_info, parse_mode=ParseMode.MARKDOWN)
                             print(f'Mensagem enviada com sucesso para o grupo!')
                         except Exception as e:
                             print(f'Erro ao enviar mensagem: {e}')
