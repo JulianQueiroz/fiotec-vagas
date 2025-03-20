@@ -2,7 +2,7 @@ name: Fiotec
 
 on:
   schedule:
-    - cron: '56 21 * * *' 
+    - cron: '59 21 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -28,4 +28,4 @@ jobs:
 
     - name: Executar o Script
       run: |
-        python fiotec-vagas/script.py
+        python script.py
